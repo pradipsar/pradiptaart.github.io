@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>Portfolio | pradiptasarmah</title>
+        <link rel="stylesheet" href="Styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link rel="icon" href="Comrade.webp" type="image/x-icon">
+    </head>
+    <body>
+        <div class="container">
+            <button class="hamburger">&#9776;</button>
+            <div class="logo">
+                <img src="Images/Logo.webp" style="height:50px;float: left;"> 
+                <p>[Pradipta]</p>
+            </div>
+            <ul class="nav">
+                <li class="active"><a href="https://pradiptaart.github.io/index.html">Portfolio</a></li>
+                <li><a href="https://pradiptaart.github.io/Contact.html">About/Contact</a></li>
+            </ul>
+
+        </div>
+        <div class="container">
+            <h1>Portfolio</h1>
+            <div class="note">
+                <span class="note-head"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> NOTE</span>
+                <ul class="info">
+                    <li> x&nbsp; Only for non-commercial purpose.</li>
+                    <li> x&nbsp; Attribution is appreciated if you repost the images somewhere or use them in any manner.</li>
+                </ul>
+            </div>
+            <div class="gallery">
+                <div class="column">
+                    <div class="pics">
+                        <img src="Images/Zubeen Garg.webp" onclick="fullview(this.src)">
+                        <img src="Images/Auto.webp" onclick="fullview(this.src)">
+                        <img src="Images/Study girl.webp" onclick="fullview(this.src)">
+                        <img src="Images/Wheelie.webp" onclick="fullview(this.src)">
+                        <img src="Images/Homomorphism.webp" onclick="fullview(this.src)">
+                        <img src="Images/Food.webp" onclick="fullview(this.src)">
+                        <img src="Images/Judgement.webp" onclick="fullview(this.src)">     
+                    </div>
+                    <div class="pics">
+                        <img src="Images/Model.webp" onclick="fullview(this.src)">
+                        <img src="Images/Street.webp" onclick="fullview(this.src)">
+                        <img src="Images/bike rider.webp" onclick="fullview(this.src)">
+                        <img src="Images/Tyler Durden.webp" onclick="fullview(this.src)">
+                        <img src="Images/Comrade.webp" onclick="fullview(this.src)">
+                        <img src="Images/Tobius.webp" onclick="fullview(this.src)">   
+                    </div>
+                    <div class="pics">
+                        <img src="Images/Simba.webp" onclick="fullview(this.src)">
+                        <img src="Images/Batman(P).webp" onclick="fullview(this.src)">
+                        <img src="Images/Ganyu 02.webp" onclick="fullview(this.src)">
+                        <img src="Images/Panda.webp" onclick="fullview(this.src)">
+                        <img src="Images/Cat Dealers.webp" onclick="fullview(this.src)">  
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <hr>
+            <button class="topbutton" onclick="topFunction()">Top</button>
+        </div>
+        
+        <div id="fullimageview" onclick="closeview()">
+            <img id="fullimage">
+        </div>
+
+        <script>
+            function fullview(imglink){
+                document.getElementById("fullimage").src=imglink;
+                document.getElementById("fullimageview").style.display="block";
+                
+            }
+            function closeview(){
+                document.getElementById("fullimageview").style.display="none";
+            }
+            document.addEventListener("DOMContentLoaded",function(){
+                const hamburger=document.querySelector(".hamburger");
+                const menu=document.querySelector(".nav");
+                const html=document.querySelector("html");
+                hamburger.addEventListener("click",function(){
+                    menu.classList.toggle("active");
+                    html.classList.toggle("active");
+                })
+            })
+            function topFunction() { 
+                window.scrollTo(0,0);
+            }
+        </script>
+    </body>
+</html>
